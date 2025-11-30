@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <h1>Weather Forecast</h1>
+    </header>
+    
+    <main>
+        <div class="search-container">
+            <form id="search-form">
+                <label for="city-input" class="visually-hidden">Enter city name</label>
+                <input type="text" id="city-input" placeholder="Enter city name" autocomplete="off" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        
+        <div id="status-message" aria-live="polite"></div>
+        
+        <div id="loading" class="hidden">Loading...</div>
+        
+        <div id="weather-card" class="hidden">
+            <div class="current-weather">
+                <h2 id="city-name"></h2>
+                <p id="date-time"></p>
+                <div class="weather-info">
+                    <div class="temperature">
+                        <span id="temp"></span>
+                        <span class="unit">°C</span>
+                    </div>
+                    <p id="description"></p>
+                </div>
+                <div class="details">
+                    <div class="detail-item">
+                        <span class="label">Humidity:</span>
+                        <span id="humidity"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Wind Speed:</span>
+                        <span id="wind-speed"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
